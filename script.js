@@ -18,13 +18,24 @@ const sentences = [
     { sentence: "Hallo", language: "Dutch" },
     { sentence: "Hej", language: "Swedish" },
     { sentence: "Hei", language: "Norwegian" },
-    { sentence: "Merhaba", language: "Turkish" }
+    { sentence: "Merhaba", language: "Turkish" },
+    { sentence: "مرحبا", language: "Arabic" },
+    { sentence: "שָׁלוֹם", language: "Hebrew" },
+    { sentence: "Γειά σας", language: "Greek" },
+    { sentence: "สวัสดี", language: "Thai" },
+    { sentence: "سلام", language: "Persian" },
+    { sentence: "Halo", language: "Malay" },
+    { sentence: "Привет", language: "Ukrainian" },
+    { sentence: "Բարեւ Ձեզ", language: "Armenian" },
+    { sentence: "Molo", language: "Xhosa" },
+    { sentence: "Sawubona", language: "Zulu" }
 ];
 
 const languageOptions = [
     "Spanish", "German", "Japanese", "Hindi", "French", "Chinese", "Russian", 
     "Italian", "Korean", "Portuguese", "Tagalog", "Indonesian", "Dutch", 
-    "Swedish", "Norwegian", "Turkish", "Arabic", "Hebrew", "Greek", "Thai"
+    "Swedish", "Norwegian", "Turkish", "Arabic", "Hebrew", "Greek", "Thai",
+    "Persian", "Malay", "Ukrainian", "Armenian", "Xhosa", "Zulu"
 ];
 
 let currentSentenceIndex = 0;
