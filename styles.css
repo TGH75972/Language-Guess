@@ -9,37 +9,37 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #000000;
-    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #ff6f61, #de6262);
+    font-family: 'Arial', sans-serif;
+    overflow: hidden;
 }
 
 .container {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Verdana', Geneva, Tahoma, sans-serif;
     background: #fff;
-    padding: 80px;
+    padding: 60px;
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     max-width: 600px;
     text-align: center;
-    animation: fadeIn 2s ease-out;
+    animation: fadeIn 2s ease-out, float 6s infinite;
+    position: relative;
 }
 
 h1 {
     font-size: 2em;
-    color:white;
-    background-color: black;
-    border-radius: 10px;
-    padding: 10px;
+    color: #333;
     margin-bottom: 20px;
     animation: slideIn 1s ease-out;
+    animation-delay: 0.2s;
+    animation-fill-mode: both;
 }
 
 #sentence-container {
-    background-color: aqua;
-    border-radius: 10px;
-    padding: 5px;
     margin-bottom: 20px;
     animation: fadeInUp 1s ease-out;
+    animation-delay: 0.4s;
+    animation-fill-mode: both;
 }
 
 button, select {
@@ -49,14 +49,18 @@ button, select {
     border: 2px solid black;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s ease;
+    transition: background-color 0.3s, transform 0.2s ease, box-shadow 0.3s;
     font-size: 1em;
     margin: 5px;
+    animation: fadeInUp 1s ease-out;
+    animation-delay: 0.6s;
+    animation-fill-mode: both;
 }
 
 button:hover, select:hover {
     background-color: #73b7ff;
     transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(115, 183, 255, 0.5);
 }
 
 button:focus, select:focus {
@@ -70,6 +74,8 @@ button:focus, select:focus {
     font-weight: bold;
     color: #333;
     animation: fadeIn 1.5s ease-out;
+    animation-delay: 0.8s;
+    animation-fill-mode: both;
 }
 
 @keyframes fadeIn {
@@ -87,12 +93,37 @@ button:focus, select:focus {
     to { transform: translateY(0); opacity: 1; }
 }
 
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
 .hidden {
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.3s ease, transform 0.3s ease;
 }
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(135deg, #ff6f61, #de6262);
+    animation: rotateBackground 10s linear infinite;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+@keyframes rotateBackground {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
 #next-btn{
-    margin-top: 50px;
+    margin-top: 20px;
     margin-left: 180px;
 }
